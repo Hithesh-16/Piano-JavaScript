@@ -1,47 +1,43 @@
-
-  
-  body {
-    background-color: lightyellow;
-    margin: 30px;
-    min-height: 100px;
-    padding-left: 200px;
-    justify-content: center;
-    align-items: center;
-  } 
-   
-  .white {
-    width: 120px;
-    height:500px;
-    background-color: white;
-    border: 1px solid black;
-  }
-  
-  .white.active {
-    background-color: silver;
-  }
-  .piano{
-      display:flex;
-      
-  }
-  .key {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    font-size: 25px;
-    font-weight: bold;
-    padding-bottom: 20px;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-  .black {
-    width: 70px;
-    height: 280px;
-    background-color: black;
-    margin-left: -40px;
-    margin-right: -40px;
-    z-index: 2;
-    color: white;
-  }
-  
-  .black.active {
-    background-color: #333;
-  }
+body {
+  background-color: #143F6B;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.piano {
+  display: flex;
+}
+
+.key {
+  height: calc(var(--width) * 4);
+  width: var(--width);
+}
+
+.white {
+  --width: 100px;
+  background-color: white;
+  border: 1px solid #333;
+}
+
+.white.active {
+  background-color: #CCC;
+}
+
+.black {
+  --width: 60px;
+  background-color: black;
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+}
+
+.black.active {
+  background-color: #333;
+}
